@@ -5,6 +5,7 @@ import './App.css';
 import { createGlobalStyle } from 'styled-components';
 import axios from 'axios';
 import { useState } from 'react';
+import Loading from './components/Loading';
 
 const GlobalStyle = createGlobalStyle`
 	html, body, div, span, applet, object, iframe,
@@ -72,23 +73,34 @@ table {
 function App() {
 	const [advice, setAdvice] = useState('Click the dice 🎲!');
 	const [id, setId] = useState('');
+	const [loading, setLoading] = useState(false);
 
 	const getAdvice = async () => {
 		const res = await axios.get('https://api.adviceslip.com/advice');
 		setAdvice(res.data.slip.advice);
 		setId(res.data.slip.id);
+		setLoading(false);
 	};
 
 	const onUpdate = () => {
-		getAdvice();
+		setLoading(true);
+		setTimeout(() => {
+			getAdvice();
+		}, 500);
 	};
 
 	return (
 		<>
 			<GlobalStyle />
 			<AdviceBox>
-				<AdviceContent advice={advice} id={id} />
-				<AdviceBtn onUpdate={onUpdate} />
+				{loading ? (
+					<Loading />
+				) : (
+					<>
+						<AdviceContent advice={advice} id={id} />
+						<AdviceBtn onUpdate={onUpdate} />
+					</>
+				)}
 			</AdviceBox>
 		</>
 	);
