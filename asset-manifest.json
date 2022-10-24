@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/advice_generator/static/css/main.80cadede.css",
-    "main.js": "/advice_generator/static/js/main.bf812ece.js",
+    "main.js": "/advice_generator/static/js/main.cb6e93b0.js",
     "index.html": "/advice_generator/index.html",
-    "main.bf812ece.js.map": "/advice_generator/static/js/main.bf812ece.js.map"
+    "main.cb6e93b0.js.map": "/advice_generator/static/js/main.cb6e93b0.js.map"
   },
   "entrypoints": [
     "static/css/main.80cadede.css",
-    "static/js/main.bf812ece.js"
+    "static/js/main.cb6e93b0.js"
   ]
 }
