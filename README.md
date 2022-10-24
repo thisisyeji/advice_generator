@@ -1,6 +1,6 @@
 # Advice generator app
 
-Advice Slip JSON API를 활용하여 제작한 랜덤 조언 생성기입니다.
+Advice Slip JSON API를 활용하여 제작한 랜덤 영어 조언 생성기입니다.
 
 ## Table of contents
 
@@ -18,7 +18,7 @@ Advice Slip JSON API를 활용하여 제작한 랜덤 조언 생성기입니다.
 ### Features
 
 - 스크린 크기별 반응형 구현
-- 주사위 클릭 시 랜덤으로 조언 생성
+- 주사위 클릭 시 랜덤으로 영어 조언 생성
 
 <!--
 Users should be able to:
