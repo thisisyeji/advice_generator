@@ -25,6 +25,16 @@ const Divider = styled.img`
 	&.mobileBorder {
 		display: none;
 	}
+
+	@media screen and (max-width: 525px) {
+		&.mobileBorder {
+			display: block;
+		}
+
+		&.webBorder {
+			display: none;
+		}
+	}
 `;
 
 const AdviceContent = ({ advice, id }) => {

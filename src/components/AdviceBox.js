@@ -20,6 +20,15 @@ const Box = styled.div`
 	padding: 40px 0 30px;
 
 	position: relative;
+	transition: 0.5s;
+
+	@media screen and (max-width: 525px) {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	@media screen and (max-width: 375px) {
+	}
 `;
 
 const AdviceBox = ({ children }) => {
