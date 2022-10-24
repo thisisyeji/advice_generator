@@ -71,7 +71,7 @@ table {
 `;
 
 function App() {
-	const [advice, setAdvice] = useState('Click the dice 🎲!');
+	const [advice, setAdvice] = useState("Let's Roll a dice 🎲!");
 	const [id, setId] = useState('');
 	const [loading, setLoading] = useState(false);
 
