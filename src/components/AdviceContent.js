@@ -12,7 +12,10 @@ const Title = styled.h1`
 const Content = styled.p`
 	color: hsl(193, 38%, 86%);
 	font-size: 28px;
+	letter-spacing: 1px;
+	line-height: 1.3;
 	text-align: center;
+	padding: 0 40px;
 `;
 
 const Divider = styled.img`
@@ -24,11 +27,11 @@ const Divider = styled.img`
 	}
 `;
 
-const AdviceContent = () => {
+const AdviceContent = ({ advice, id }) => {
 	return (
 		<>
-			<Title>ADVICE #117</Title>
-			<Content>Advice</Content>
+			<Title>ADVICE #{id}</Title>
+			<Content>“{advice}”</Content>
 			<Divider
 				src={process.env.PUBLIC_URL + '/images/divider-desktop.svg'}
 				alt='divider'

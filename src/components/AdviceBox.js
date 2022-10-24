@@ -3,10 +3,11 @@ import styled from 'styled-components';
 
 const Box = styled.div`
 	width: 500px;
-	height: 300px;
+	height: 100%;
+	min-height: 300px;
 	background: hsl(217, 19%, 24%);
 	border-radius: 15px;
-	padding-top: 40px;
+	padding: 40px 0 30px;
 
 	position: relative;
 `;

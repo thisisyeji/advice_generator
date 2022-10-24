@@ -43,9 +43,9 @@ const DiceBtn = styled.button`
 	}
 `;
 
-const AdviceBtn = () => {
+const AdviceBtn = ({ onUpdate }) => {
 	return (
-		<DiceBtn>
+		<DiceBtn onClick={() => onUpdate()}>
 			<img src={process.env.PUBLIC_URL + 'images/icon-dice.svg'} alt='dice' />
 		</DiceBtn>
 	);

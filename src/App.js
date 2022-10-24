@@ -3,6 +3,8 @@ import AdviceContent from './components/AdviceContent';
 import AdviceBtn from './components/AdviceBtn';
 import './App.css';
 import { createGlobalStyle } from 'styled-components';
+import axios from 'axios';
+import { useState } from 'react';
 
 const GlobalStyle = createGlobalStyle`
 	html, body, div, span, applet, object, iframe,
@@ -68,12 +70,25 @@ table {
 `;
 
 function App() {
+	const [advice, setAdvice] = useState('Click the dice for advice!');
+	const [id, setId] = useState('');
+
+	const getAdvice = async () => {
+		const res = await axios.get('https://api.adviceslip.com/advice');
+		setAdvice(res.data.slip.advice);
+		setId(res.data.slip.id);
+	};
+
+	const onUpdate = () => {
+		getAdvice();
+	};
+
 	return (
 		<>
 			<GlobalStyle />
 			<AdviceBox>
-				<AdviceContent />
-				<AdviceBtn />
+				<AdviceContent advice={advice} id={id} />
+				<AdviceBtn onUpdate={onUpdate} />
 			</AdviceBox>
 		</>
 	);
