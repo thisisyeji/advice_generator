@@ -70,7 +70,7 @@ table {
 `;
 
 function App() {
-	const [advice, setAdvice] = useState('Click the dice for advice!');
+	const [advice, setAdvice] = useState('Click the dice 🎲!');
 	const [id, setId] = useState('');
 
 	const getAdvice = async () => {

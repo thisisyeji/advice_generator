@@ -1,6 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const Title = styled.h1`
+	color: hsl(218, 23%, 16%);
+	font-size: 40px;
+	text-shadow: -1px 0 hsl(193, 38%, 86%), 0 1px hsl(193, 38%, 86%),
+		1px 0 hsl(193, 38%, 86%), 0 -1px hsl(193, 38%, 86%);
+	font-family: 'Leckerli One', cursive;
+	text-align: center;
+	margin-bottom: 30px;
+`;
+
 const Box = styled.div`
 	width: 500px;
 	height: 100%;
@@ -13,7 +23,12 @@ const Box = styled.div`
 `;
 
 const AdviceBox = ({ children }) => {
-	return <Box>{children}</Box>;
+	return (
+		<>
+			<Title>Do you need any advice?</Title>
+			<Box>{children}</Box>
+		</>
+	);
 };
 
 export default AdviceBox;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Title = styled.h1`
+const Title = styled.h2`
 	color: hsl(150, 100%, 66%);
 	letter-spacing: 4px;
 	font-size: 11px;
