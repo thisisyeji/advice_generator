@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/advice_generator/static/css/main.80cadede.css",
+    "main.js": "/advice_generator/static/js/main.bf812ece.js",
+    "index.html": "/advice_generator/index.html",
+    "main.bf812ece.js.map": "/advice_generator/static/js/main.bf812ece.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.80cadede.css",
+    "static/js/main.bf812ece.js"
+  ]
+}
